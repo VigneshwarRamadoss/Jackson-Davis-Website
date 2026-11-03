@@ -1,5 +1,38 @@
 [
- {"slug":"coachs-bundle-1","name":"Coach's Bundle 1","priceUsd":55,"stanUrl":"https://stan.store/JacksonDavis/p/coachs-bundle-1","includes":["player-role-finder","five-player-lineup-simulator","opponent-play-type-analysis"],"contentsVerified":true},
- {"slug":"recruiting-bundle","name":"Recruiting Bundle","priceUsd":35,"stanUrl":"https://stan.store/JacksonDavis/p/recruiting-bundle","includes":["recruit-evaluation-dashboard","recruiting-board"],"contentsVerified":true},
- {"slug":"coaches-bundle-2","name":"Coaches Bundle 2","priceUsd":35,"stanUrl":"https://stan.store/JacksonDavis/p/coaches-bundle-2-rzncy4lu","includes":[],"description":"Everything your staff needs in one bundle","contentsVerified":false}
+  {
+    "slug": "coachs-bundle-1",
+    "name": "Coach's Bundle 1",
+    "priceUsd": 55,
+    "stanUrl": "https://stan.store/JacksonDavis/p/coachs-bundle-1",
+    "includes": [
+      "player-role-finder",
+      "five-player-lineup-simulator",
+      "opponent-play-type-analysis"
+    ],
+    "contentsVerified": true
+  },
+  {
+    "slug": "recruiting-bundle",
+    "name": "Recruiting Bundle",
+    "priceUsd": 35,
+    "stanUrl": "https://stan.store/JacksonDavis/p/recruiting-bundle",
+    "includes": [
+      "recruit-evaluation-dashboard",
+      "recruiting-board"
+    ],
+    "contentsVerified": true
+  },
+  {
+    "slug": "coaches-bundle-2",
+    "name": "Coaches Bundle 2",
+    "priceUsd": 35,
+    "stanUrl": "https://stan.store/JacksonDavis/p/coaches-bundle-2-rzncy4lu",
+    "includes": [
+      "opponent-play-type-analysis",
+      "practice-plan-template",
+      "player-role-finder"
+    ],
+    "description": "Everything your staff needs in one bundle",
+    "contentsVerified": true
+  }
 ]

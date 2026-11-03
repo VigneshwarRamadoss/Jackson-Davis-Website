@@ -1,0 +1,6 @@
+---
+import bundles from '../data/bundles.json';
+import tools from '../data/tools.json';
+import Icon from './Icon.astro';
+---
+<section class="section bundles" id="bundles"><div class="section-heading"><div><span class="eyebrow section-kicker">02 / Better together</span><h2>Start with a bundle.</h2></div><p>A few tools. One connected workflow.<br/>Find the right combination for your staff.</p></div><div class="bundle-grid">{bundles.map((b,i)=><article class:list={['bundle-card',i===0&&'bundle-first']} data-bundle={b.slug}><span class="eyebrow">{i===0?'Scouting & lineups':i===1?'Recruiting':'For your staff'}</span><h3>{b.name}</h3><div class="bundle-price">${b.priceUsd}<span>USD · one-time</span></div><div class="bundle-contents">{b.contentsVerified?b.includes.map(slug=><p><Icon name="check" size={17}/>{tools.find(t=>t.slug===slug)?.name}</p>):<><p>Everything your staff needs in one bundle.</p><small>Exact contents: awaiting confirmation.</small></>}</div><a class:list={['button',i!==0&&'button-outline']} data-stan={b.slug} href={`${b.stanUrl}?utm_source=site&utm_medium=bundle&utm_campaign=${b.slug}`}>View bundle on Stan <Icon name="diagonal" size={17}/></a></article>)}</div></section>

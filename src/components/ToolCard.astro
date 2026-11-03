@@ -1,0 +1,8 @@
+---
+import Icon from './Icon.astro';
+const {tool,index=0,visual=true}=Astro.props;
+const categories:Record<string,string>={'game-day':'Game day','scouting-lineups':'Scouting & lineups',recruiting:'Recruiting'};
+---
+<article class="tool-card" data-cat={tool.category} data-slug={tool.slug}>
+{visual&&<a href={`/tools/${tool.slug}/`} class:list={['tool-art',`art-${index%3}`]} aria-label={`Explore ${tool.name}`}><span class="art-label eyebrow">{categories[tool.category]}</span><span class="court-drawing"><i></i><i></i><i></i><i></i><i></i><span class="court-center"></span></span><span class="art-number">0{index+1}</span><span class="art-symbol"><Icon name={tool.category==='game-day'?'court':tool.category==='recruiting'?'layers':'ball'} size={60}/></span><span class="art-caption eyebrow">The coach's toolkit</span><span class="art-go"><Icon name="diagonal"/></span></a>}
+<div class="tool-info"><div class="card-meta"><span class="eyebrow">{categories[tool.category]}</span><span class="tool-price">${tool.priceUsd}<small> USD</small></span></div><h3><a href={`/tools/${tool.slug}/`}>{tool.name}</a></h3><p>{tool.summary}</p><div class="card-bottom"><a class="text-link" href={`/tools/${tool.slug}/`}>Explore tool <Icon name="arrow" size={17}/></a><a class="stan-small" data-stan={tool.slug} href={`${tool.stanUrl}?utm_source=site&utm_medium=tool_card&utm_campaign=${tool.slug}`}>Buy on Stan ↗</a></div></div></article>

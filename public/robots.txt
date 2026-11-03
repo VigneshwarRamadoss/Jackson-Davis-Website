@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jackson-davis-courtside.vigneshwarr2035.chatgpt.site/sitemap.xml

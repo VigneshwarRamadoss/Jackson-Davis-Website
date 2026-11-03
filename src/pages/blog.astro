@@ -1,0 +1,8 @@
+---
+import Base from '../layouts/Base.astro';
+import Posts from '../components/Posts.astro';
+import Icon from '../components/Icon.astro';
+import {getPosts} from '../lib/rss';
+const feed=await getPosts();
+---
+<Base title="Practical analytics, every week"><section class="section page-head"><span class="eyebrow section-kicker">The film room / Writing by Jackson Davis</span><h1>Practical analytics,<br/>every week.</h1><p>Basketball analytics, video and player development. A fresh perspective every Monday on Substack.</p><a class="button" href="https://jacksondavisttu.substack.com/subscribe">Subscribe on Substack <Icon name="diagonal" size={17}/></a></section><Posts posts={feed.posts} cached={feed.cached} heading={false}/></Base>
